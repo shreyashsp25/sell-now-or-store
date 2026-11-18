@@ -1,0 +1,15 @@
+# Too big for GitHub (over 100 MB) - rebuilt by extract_karnataka.py
+raw_data/
+data/karnataka_all_years.csv
+
+# Research papers are copyrighted - listed in README instead
+papers/
+
+# Junk
+python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini

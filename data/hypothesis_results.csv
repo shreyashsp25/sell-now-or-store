@@ -1,0 +1,10 @@
+hypothesis,crop,test,statistic,p_value,effect size,effect,n,note,p_holm,decision (alpha 0.05)
+H1 seasonality,Onion,Kruskal-Wallis,1508.54,0.0,epsilon squared,0.271,5542,,0.0,reject H0
+H1 seasonality,Maize,Kruskal-Wallis,2092.67,0.0,epsilon squared,0.175,11879,,0.0,reject H0
+H2 storage gain (3 months),Onion,Wilcoxon signed-rank (one-sided),20999.0,7.984157635873601e-16,rank-biserial r,0.609,241,median gain 25.0% (95% CI 3.6 to 45.7),3.1936630543494404e-15,reject H0
+H2 storage gain (3 months),Maize,Wilcoxon signed-rank (one-sided),76525.5,3.700195393048345e-06,rank-biserial r,0.232,526,median gain 2.2% (95% CI -2.7 to 11.5),1.1100586179145036e-05,reject H0
+H3 onion riskier than maize,Onion vs Maize,Mann-Whitney U (one-sided),486089.5,4.385174723713391e-191,rank-biserial r,0.938,1524,median swing onion 110% vs maize 29%,3.0696223065993736e-190,reject H0
+H4 district premium,Onion,Kruskal-Wallis,280.01,9.574928297237489e-48,epsilon squared,0.258,1027,"21 districts; cheapest Gadag -29%, dearest Udupi +38%",4.787464148618745e-47,reject H0
+H4 district premium,Maize,Kruskal-Wallis,439.23,1.4273673409007372e-78,epsilon squared,0.193,2184,"24 districts; cheapest Mysore -11%, dearest Bangalore +10%",8.564204045404423e-78,reject H0
+H5 timing of yearly low changed,Onion,Chi-square homogeneity,5.26,0.15398886028567646,Cramer's V,0.105,481,"goodness of fit vs uniform months: chi2 = 438, p = 4.1e-87",0.15398886028567646,do not reject H0
+H5 timing of yearly low changed,Maize,Chi-square homogeneity,11.29,0.01024744703817938,Cramer's V,0.104,1043,"goodness of fit vs uniform months: chi2 = 858, p = 8.0e-177",0.02049489407635876,reject H0

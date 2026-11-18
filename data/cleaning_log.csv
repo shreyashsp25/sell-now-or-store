@@ -1,0 +1,19 @@
+step,detail,rows_affected,rows_after
+1 Types,"Converted text, dates and prices to proper types",0,267369
+1b Names,Removed ' APMC' suffix added to market names from Nov 2025,5055,267369
+2 Period,Dropped records before 2003 (too sparse),7228,260141
+3a Validate,Dropped records with modal price missing or <= 0,0,260141
+3b Validate,min_price <= 0 set to missing (modal kept),677,260141
+3b Validate,max_price <= 0 set to missing (modal kept),524,260141
+3c Validate,Swapped min and max where min > max,0,260141
+3d Validate,Flagged modal price outside min-max range (kept),7,260141
+4a Duplicates,Dropped exact duplicate records,39,260102
+4b Duplicates,Merged conflicting records into one (median price),7,260095
+5a Categories,"Removed specialty varieties ['Sweet Corn (For Biscuits)', 'Pro Agro 4212', 'Bangalore-Samall']",5930,254165
+5b Categories,Merged rare varieties (<100 records) into 'Other',29,254165
+5c Categories,"Grades reduced from 9 labels to 4 (FAQ, Medium, Local, Other)",0,254165
+5d Duplicates,Merged conflicting records into one (median price),3,254162
+6a Outliers,Removed entry errors (far from own market AND from statewide price),329,253833
+6b Outliers,Flagged extreme-but-plausible prices (kept),7298,253833
+6c Outliers,Flagged market-years priced 2x above or below the state (kept),1331,253833
+7 Missing,Filled weekly gaps of <= 8 weeks using 'Linear interpolation',6738,56100

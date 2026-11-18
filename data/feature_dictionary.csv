@@ -1,0 +1,17 @@
+feature,group,formula,why it is meaningful
+"woy_sin, woy_cos",A Calendar,sin and cos of 2*pi*week/52,Position in the crop year; week 52 sits next to week 1
+"week_of_year, month",A Calendar,"ISO week (1-52), calendar month","Season, for tree models"
+chg_1w ... chg_52w,B Momentum,log price now - log price k weeks ago,Direction and length of the recent trend
+vs_52w_mean,C Level,log price - mean log price of last 52 weeks,Is the price high compared with the last year?
+vs_seasonal_norm,C Level,"log price - mean of same week 1, 2, 3 years ago",Is the price high for this time of year? (high prices tend to fall)
+range_pos_52w,C Level,(price - 52-week min) / (52-week max - min),Near the top or bottom of the past year's range?
+seas_exp_hw_crop,D Seasonal,"median h-week log change from this week of year, training years, all markets",What usually happens next at this time of year
+seas_exp_hw_mkt,D Seasonal,"same, for this market (crop value if < 5 training years)",Local seasonal pattern
+room_to_rise_12w,E Combined,seas_exp_12w_mkt - vs_seasonal_norm,"Seasonal rise still to come, after allowing for how high the price already is"
+"vol_8w, vol_26w",F Risk,SD of weekly log changes over 8 / 26 weeks,How jumpy the market is; risk of storing
+premium,G Spatial,log price - log statewide median,Is this market dear or cheap compared with the state now?
+premium_52w,G Spatial,mean premium over last 52 weeks,This market's usual position compared with the state
+state_chg_4w,G Spatial,4-week change of statewide median,Where the whole state's price is heading
+"division, market",G Spatial,categories (one-hot encoded in Notebook 5),Fixed local differences
+"imputed_share_8w, was_imputed",H Data quality,share of last 8 weeks filled in Notebook 2,How much to trust the recent history
+"pc1, pc2, pc3",PCA,scores of 4-week changes on training-fitted components,Statewide factor and regional contrasts
